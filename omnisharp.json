@@ -1,0 +1,13 @@
+{
+  "FormattingOptions": {
+    "EnableEditorConfigSupport": true
+  },
+  "RoslynExtensionsOptions": {
+    "enableDecompilationSupport": true,
+    "enableImportCompletion": true,
+    "enableAnalyzersSupport": true,
+    "locationPaths": [
+      "C:\\Users\\SG0225699\\.omnisharp\\analyzers"
+    ]
+  }
+}

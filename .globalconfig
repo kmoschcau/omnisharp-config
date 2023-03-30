@@ -1,0 +1,300 @@
+# vim: filetype=conf foldmethod=marker
+
+# mark as global config file
+is_global = true
+
+dotnet_diagnostic.ROS0003.severity = error
+
+# Code quality rules {{{1
+
+# Design rules {{{2
+
+dotnet_analyzer_diagnostic.category-Design.severity = warning
+
+# Documentation rules {{{2
+
+dotnet_analyzer_diagnostic.category-Documentation.severity = warning
+
+# Globalization rules {{{2
+
+dotnet_analyzer_diagnostic.category-Globalization.severity = warning
+
+# Maintainability rules {{{2
+
+dotnet_analyzer_diagnostic.category-Maintainability.severity = warning
+
+# Naming rules {{{2
+
+dotnet_analyzer_diagnostic.category-Naming.severity = warning
+
+# Performance rules {{{2
+
+dotnet_analyzer_diagnostic.category-Performance.severity = warning
+
+# Reliability rules {{{2
+
+dotnet_analyzer_diagnostic.category-Reliability.severity = warning
+
+# Security rules {{{2
+
+dotnet_analyzer_diagnostic.category-Security.severity = warning
+
+# Usage rules {{{2
+
+dotnet_analyzer_diagnostic.category-Usage.severity = warning
+
+# Code style rules {{{1
+
+dotnet_analyzer_diagnostic.category-Style.severity = silent
+
+# Language rules {{{2
+
+# var preferences
+# Use var instead of explicit type
+dotnet_diagnostic.IDE0007.severity = suggestion
+# Use explicit type instead of var
+dotnet_diagnostic.IDE0008.severity = none
+csharp_style_var_for_built_in_types = true
+csharp_style_var_when_type_is_apparent = true
+csharp_style_var_elsewhere = true
+
+# Unnecessary code rules {{{2
+
+# Simplify name
+dotnet_diagnostic.IDE0001.severity = silent
+
+# Simplify member access
+dotnet_diagnostic.IDE0002.severity = silent
+
+# this and Me preferences
+# Remove this or Me qualification
+dotnet_diagnostic.IDE0003.severity = silent
+# Add this or Me qualification
+dotnet_diagnostic.IDE0009.severity = none
+
+# Remove unnecessary cast
+dotnet_diagnostic.IDE0004.severity = silent
+
+# Remove unnecessary using directives
+dotnet_diagnostic.IDE0005.severity = silent
+
+# Roslynator.Analyzers {{{1
+
+# Add braces
+dotnet_diagnostic.RCS1007.severity = suggestion
+
+# Use 'var' instead of explicit type (when the type is obvious)
+dotnet_diagnostic.RCS1010.severity = suggestion
+
+# Use predefined type
+dotnet_diagnostic.RCS1013.severity = suggestion
+
+# Use explicitly/implicitly typed array
+dotnet_diagnostic.RCS1014.severity = suggestion
+roslynator_array_creation_type_style = implicit_when_type_is_obvious
+
+# Use block body or expression body
+dotnet_diagnostic.RCS1016.severity = silent
+roslynator_body_style = expression
+roslynator_use_block_body_when_declaration_spans_over_multiple_lines = true
+roslynator_use_block_body_when_expression_spans_over_multiple_lines = true
+
+# Add/remove accessibility modifiers
+dotnet_diagnostic.RCS1018.severity = suggestion
+roslynator_accessibility_modifiers = explicit
+
+# Order modifiers
+dotnet_diagnostic.RCS1019.severity = silent
+
+# Remove redundant comma in initializer
+dotnet_diagnostic.RCS1035.severity = silent
+
+# Include/omit parentheses when creating new object
+dotnet_diagnostic.RCS1050.severity = silent
+roslynator_object_creation_parentheses_style = omit
+
+# Add/remove parentheses from condition in conditional operator
+dotnet_diagnostic.RCS1051.severity = silent
+roslynator_conditional_operator_condition_parentheses_style = omit
+
+# Use "" or 'string.Empty'
+dotnet_diagnostic.RCS1078.severity = suggestion
+roslynator_empty_string_style = field
+
+# Split variable declaration
+dotnet_diagnostic.RCS1081.severity = suggestion
+
+# Add braces to if-else
+dotnet_diagnostic.RCS1126.severity = silent
+
+# Remove redundant async/await
+dotnet_diagnostic.RCS1174.severity = silent
+
+# Use 'var' instead of explicit type (when the type is not obvious)
+dotnet_diagnostic.RCS1176.severity = suggestion
+
+# Use 'var' instead of explicit type (in foreach)
+dotnet_diagnostic.RCS1177.severity = suggestion
+
+# Convert comment to documentation comment
+dotnet_diagnostic.RCS1181.severity = suggestion
+
+# Remove redundant auto-property initialization
+dotnet_diagnostic.RCS1188.severity = silent
+
+# Add or remove region name
+dotnet_diagnostic.RCS1189.severity = silent
+
+# Avoid unnecessary boxing of value type
+dotnet_diagnostic.RCS1198.severity = silent
+
+# Use anonymous function or method group
+dotnet_diagnostic.RCS1207.severity = suggestion
+roslynator_use_anonymous_function_or_method_group = method_group
+
+# Reduce 'if' nesting
+dotnet_diagnostic.RCS1208.severity = suggestion
+
+# Make parameter ref read-only
+dotnet_diagnostic.RCS1231.severity = suggestion
+
+# Normalize null check
+dotnet_diagnostic.RCS1248.severity = suggestion
+roslynator_null_check_style = pattern_matching
+
+# Roslynator.Formatting.Analyzers {{{1
+# see http://pihrt.net/Roslynator/Analyzers?Query=RCS0
+
+# Add blank line after embedded statement
+dotnet_diagnostic.RCS0001.severity = silent
+
+# Add blank line after #region
+dotnet_diagnostic.RCS0002.severity = silent
+
+# Add blank line after using directive list
+dotnet_diagnostic.RCS0003.severity = silent
+
+# Add blank line before #endregion
+dotnet_diagnostic.RCS0005.severity = silent
+
+# Add blank line before using directive list
+dotnet_diagnostic.RCS0006.severity = silent
+
+# Add blank line between accessors
+dotnet_diagnostic.RCS0007.severity = silent
+
+# Add blank line between closing brace and next statement
+dotnet_diagnostic.RCS0008.severity = silent
+
+# Add blank line between declaration and documentation comment
+dotnet_diagnostic.RCS0009.severity = silent
+
+# Add blank line between declarations
+dotnet_diagnostic.RCS0010.severity = silent
+
+# Add/remove blank line between single-line accessors
+dotnet_diagnostic.RCS0011.severity = silent
+roslynator_blank_line_between_single_line_accessors = false
+
+# Add blank line between switch sections
+dotnet_diagnostic.RCS0014.severity = silent
+roslynator_blank_line_between_closing_brace_and_switch_section = true
+
+# Add/remove blank line between using directives
+dotnet_diagnostic.RCS0015.severity = silent
+roslynator_blank_line_between_using_directives = never
+
+# Put attribute list on its own line
+dotnet_diagnostic.RCS0016.severity = silent
+
+# Format accessor's braces on a single line or multiple lines
+dotnet_diagnostic.RCS0020.severity = silent
+roslynator_accessor_braces_style = single_line_when_expression_is_on_single_line
+
+# Format block's braces on a single line or multiple lines
+dotnet_diagnostic.RCS0021.severity = silent
+roslynator_block_braces_style = single_line_when_empty
+
+# Add new line after switch label
+dotnet_diagnostic.RCS0024.severity = silent
+
+# Put full accessor on its own line
+dotnet_diagnostic.RCS0025.severity = silent
+
+# Place new line after/before binary operator
+dotnet_diagnostic.RCS0027.severity = silent
+roslynator_binary_operator_new_line = before
+
+# Place new line after/before '?:' operator
+dotnet_diagnostic.RCS0028.severity = silent
+roslynator_conditional_operator_new_line = before
+
+# Put constructor initializer on its own line
+dotnet_diagnostic.RCS0029.severity = silent
+
+# Add new line before embedded statement
+dotnet_diagnostic.RCS0030.severity = silent
+
+# Put enum member on its own line
+dotnet_diagnostic.RCS0031.severity = silent
+
+# Place new line after/before arrow token
+dotnet_diagnostic.RCS0032.severity = silent
+roslynator_arrow_token_new_line = after
+
+# Add new line before statement
+dotnet_diagnostic.RCS0033.severity = silent
+
+# Put type parameter constraint on its own line
+dotnet_diagnostic.RCS0034.severity = silent
+
+# Remove new line before base list
+dotnet_diagnostic.RCS0039.severity = silent
+
+# Remove new line between 'if' keyword and 'else' keyword
+dotnet_diagnostic.RCS0041.severity = silent
+
+# Put auto-accessors on a single line
+dotnet_diagnostic.RCS0042.severity = silent
+
+# Format accessor's braces on a single line when expression is on single line
+dotnet_diagnostic.RCS0043.severity = silent
+
+# Use carriage return + linefeed as new line
+dotnet_diagnostic.RCS0044.severity = none
+
+# Use linefeed as new line
+dotnet_diagnostic.RCS0045.severity = silent
+
+# Use spaces instead of tab
+dotnet_diagnostic.RCS0046.severity = silent
+
+# Put initializer on a single line
+dotnet_diagnostic.RCS0048.severity = silent
+
+# Add blank line after top comment
+dotnet_diagnostic.RCS0049.severity = silent
+
+# Add blank line before top declaration
+dotnet_diagnostic.RCS0050.severity = silent
+
+# Add/remove new line before 'while' in 'do' statement
+dotnet_diagnostic.RCS0051.severity = silent
+roslynator_new_line_before_while_in_do_statement = false
+
+# Place new line after/before equals token
+dotnet_diagnostic.RCS0052.severity = silent
+roslynator_equals_token_new_line = after
+
+# Fix formatting of a list
+dotnet_diagnostic.RCS0053.severity = silent
+
+# Fix formatting of a call chain
+dotnet_diagnostic.RCS0054.severity = silent
+
+# Fix formatting of a binary expression chain
+dotnet_diagnostic.RCS0055.severity = silent
+
+# A line is too long
+dotnet_diagnostic.RCS0056.severity = silent
+roslynator_max_line_length = 120
