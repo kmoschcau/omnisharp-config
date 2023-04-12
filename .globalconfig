@@ -58,27 +58,326 @@ csharp_style_var_for_built_in_types = true
 csharp_style_var_when_type_is_apparent = true
 csharp_style_var_elsewhere = true
 
+# Add missing cases to switch statement
+dotnet_diagnostic.IDE0010.severity = suggestion
+
+# Add braces
+dotnet_diagnostic.IDE0011.severity = suggestion
+
+# Use throw expression
+dotnet_diagnostic.IDE0016.severity = suggestion
+
+# Use object initializers
+dotnet_diagnostic.IDE0017.severity = suggestion
+
+# Inline variable declaration
+dotnet_diagnostic.IDE0018.severity = suggestion
+
+# Use pattern matching to avoid as followed by a null check
+dotnet_diagnostic.IDE0019.severity = suggestion
+
+# Use pattern matching to avoid 'is' check followed by a cast
+# Use pattern matching to avoid is check followed by a cast (with variable)
+dotnet_diagnostic.IDE0020.severity = suggestion
+# Use pattern matching to avoid is check followed by a cast (without variable)
+dotnet_diagnostic.IDE0038.severity = none
+
+# Use expression body for constructors
+dotnet_diagnostic.IDE0021.severity = suggestion
+
+# Use expression body for methods
+dotnet_diagnostic.IDE0022.severity = suggestion
+
+# Use expression body for operators
+# Use expression body for conversion operators
+dotnet_diagnostic.IDE0023.severity = suggestion
+# Use expression body for operators
+dotnet_diagnostic.IDE0024.severity = suggestion
+
+# Use expression body for properties
+dotnet_diagnostic.IDE0025.severity = suggestion
+
+# Use expression body for indexers
+dotnet_diagnostic.IDE0026.severity = suggestion
+
+# Use expression body for accessors
+dotnet_diagnostic.IDE0027.severity = suggestion
+
+# Use collection initializers
+dotnet_diagnostic.IDE0028.severity = suggestion
+
+# Use coalesce expression
+# Use coalesce expression (non-nullable types)
+dotnet_diagnostic.IDE0029.severity = suggestion
+# Use coalesce expression (nullable types)
+dotnet_diagnostic.IDE0030.severity = suggestion
+
+# Use null propagation
+dotnet_diagnostic.IDE0031.severity = suggestion
+
+# Use auto-implemented property
+dotnet_diagnostic.IDE0032.severity = suggestion
+
+# Use explicitly provided tuple name
+dotnet_diagnostic.IDE0033.severity = suggestion
+
+# Simplify default expression
+dotnet_diagnostic.IDE0034.severity = suggestion
+
+# Order modifiers
+dotnet_diagnostic.IDE0036.severity = suggestion
+
+# Use inferred member name
+dotnet_diagnostic.IDE0037.severity = suggestion
+
+# Use local function instead of lambda
+dotnet_diagnostic.IDE0039.severity = suggestion
+
+# Add accessibility modifiers
+dotnet_diagnostic.IDE0040.severity = suggestion
+
+# Use 'is null' check
+dotnet_diagnostic.IDE0041.severity = suggestion
+
+# Deconstruct variable declaration
+dotnet_diagnostic.IDE0042.severity = suggestion
+
+# Add readonly modifier
+dotnet_diagnostic.IDE0044.severity = suggestion
+
+# Use conditional expression for assignment
+dotnet_diagnostic.IDE0045.severity = suggestion
+
+# Use conditional expression for return
+dotnet_diagnostic.IDE0046.severity = suggestion
+
+# Parentheses preferences
+# Remove unnecessary parentheses
+dotnet_diagnostic.IDE0047.severity = suggestion
+# Add parentheses for clarity
+dotnet_diagnostic.IDE0048.severity = suggestion
+dotnet_style_parentheses_in_arithmetic_binary_operators = never_if_unnecessary
+dotnet_style_parentheses_in_relational_binary_operators = never_if_unnecessary
+dotnet_style_parentheses_in_other_binary_operators = never_if_unnecessary
+
+# Use language keywords instead of framework type names for type references
+dotnet_diagnostic.IDE0049.severity = suggestion
+
+# Use expression body for lambdas
+dotnet_diagnostic.IDE0053.severity = suggestion
+csharp_style_expression_bodied_lambdas = when_on_single_line
+
+# Use compound assignment
+# Use compound assignment
+dotnet_diagnostic.IDE0054.severity = suggestion
+# Use coalesce compound assignment
+dotnet_diagnostic.IDE0074.severity = suggestion
+
+# Use index operator
+dotnet_diagnostic.IDE0056.severity = suggestion
+
+# Use range operator
+dotnet_diagnostic.IDE0057.severity = suggestion
+
+# Use expression body for local functions
+dotnet_diagnostic.IDE0061.severity = suggestion
+
+# Make local function static
+dotnet_diagnostic.IDE0062.severity = suggestion
+
+# Use simple using statement
+dotnet_diagnostic.IDE0063.severity = suggestion
+
+# Make struct fields writable
+dotnet_diagnostic.IDE0064.severity = suggestion
+
+# using directive placement
+dotnet_diagnostic.IDE0065.severity = suggestion
+
+# Use switch expression
+dotnet_diagnostic.IDE0066.severity = suggestion
+
+# Use 'System.HashCode.Combine'
+dotnet_diagnostic.IDE0070.severity = suggestion
+
+# Simplify interpolation
+dotnet_diagnostic.IDE0071.severity = suggestion
+
+# Add missing cases to switch expression
+dotnet_diagnostic.IDE0072.severity = warning
+
+# Simplify conditional expression
+dotnet_diagnostic.IDE0075.severity = suggestion
+
+# Use pattern matching
+dotnet_diagnostic.IDE0078.severity = suggestion
+
+# Convert typeof to nameof
+dotnet_diagnostic.IDE0082.severity = suggestion
+
+# Use pattern matching (not operator)
+dotnet_diagnostic.IDE0083.severity = suggestion
+
+# Simplify new expression
+dotnet_diagnostic.IDE0090.severity = suggestion
+
+# Namespace does not match folder structure
+dotnet_diagnostic.IDE0130.severity = suggestion
+
+# Prefer null check over type check
+dotnet_diagnostic.IDE0150.severity = suggestion
+
+# Namespace declaration preferences
+# Use block-scoped namespace
+dotnet_diagnostic.IDE0160.severity = suggestion
+# Use file-scoped namespace
+dotnet_diagnostic.IDE0161.severity = none
+
+# Simplify property pattern
+dotnet_diagnostic.IDE0170.severity = suggestion
+
+# Use tuple to swap values
+dotnet_diagnostic.IDE0180.severity = suggestion
+
+# Use conditional delegate call
+dotnet_diagnostic.IDE1005.severity = suggestion
+
 # Unnecessary code rules {{{2
 
 # Simplify name
-dotnet_diagnostic.IDE0001.severity = silent
+dotnet_diagnostic.IDE0001.severity = suggestion
 
 # Simplify member access
-dotnet_diagnostic.IDE0002.severity = silent
+dotnet_diagnostic.IDE0002.severity = suggestion
 
 # this and Me preferences
 # Remove this or Me qualification
-dotnet_diagnostic.IDE0003.severity = silent
+dotnet_diagnostic.IDE0003.severity = suggestion
 # Add this or Me qualification
 dotnet_diagnostic.IDE0009.severity = none
 
 # Remove unnecessary cast
-dotnet_diagnostic.IDE0004.severity = silent
+dotnet_diagnostic.IDE0004.severity = suggestion
 
 # Remove unnecessary using directives
-dotnet_diagnostic.IDE0005.severity = silent
+dotnet_diagnostic.IDE0005.severity = suggestion
+
+# Remove unreachable code
+dotnet_diagnostic.IDE0035.severity = warning
+
+# Remove unused private member
+dotnet_diagnostic.IDE0051.severity = warning
+
+# Remove unread private member
+dotnet_diagnostic.IDE0052.severity = warning
+
+# Remove unnecessary expression value
+dotnet_diagnostic.IDE0058.severity = warning
+
+# Remove unnecessary value assignment
+dotnet_diagnostic.IDE0059.severity = warning
+
+# Remove unused parameter
+dotnet_diagnostic.IDE0060.severity = warning
+
+# Remove unnecessary suppression
+dotnet_diagnostic.IDE0079.severity = warning
+
+# Remove unnecessary suppression operator
+dotnet_diagnostic.IDE0080.severity = warning
+
+# Remove unnecessary equality operator
+dotnet_diagnostic.IDE0100.severity = suggestion
+
+# Remove unnecessary discard
+dotnet_diagnostic.IDE0110.severity = suggestion
+
+# Miscellaneous rules {{{2
+
+# Remove invalid global 'SuppressMessageAttribute'
+dotnet_diagnostic.IDE0076.severity = warning
+
+# Avoid legacy format target in global 'SuppressMessageAttribute'
+dotnet_diagnostic.IDE0077.severity = warning
+
+# Formatting rules {{{2
+
+# Fix formatting
+dotnet_diagnostic.IDE0052.severity = suggestion
+
+# Naming rules {{{2
+
+# Naming styles
+dotnet_diagnostic.IDE1006.severity = suggestion
+
+# see https://learn.microsoft.com/en-us/dotnet/standard/design-guidelines/naming-guidelines
+
+# symbol selectors {{{3
+
+dotnet_naming_symbols.public_identifiers.applicable_kinds = namespace, class, struct, enum, property, method, field
+dotnet_naming_symbols.public_identifiers.applicable_accessibilities = public
+
+dotnet_naming_symbols.parameters.applicable_kinds = parameter
+dotnet_naming_symbols.parameters.applicable_accessibilities = *
+
+dotnet_naming_symbols.interfaces.applicable_kinds = interface
+dotnet_naming_symbols.interfaces.applicable_accessibilities = *
+
+dotnet_naming_symbols.type_parameters.applicable_kinds = type_parameter
+dotnet_naming_symbols.type_parameters.applicable_accessibilities = *
+
+dotnet_naming_symbols.event_handlers.applicable_kinds = event
+dotnet_naming_symbols.event_handlers.applicable_accessibilities = *
+
+dotnet_naming_symbols.delegates.applicable_kinds = delegate
+dotnet_naming_symbols.delegates.applicable_accessibilities = *
+
+# styles {{{3
+
+dotnet_naming_style.pascal_case.capitalization = pascal_case
+
+dotnet_naming_style.camel_case.capitalization = camel_case
+
+dotnet_naming_style.interface_pascal_case.capitalization = pascal_case
+dotnet_naming_style.interface_pascal_case.required_prefix = I
+
+dotnet_naming_style.type_parameter_pascal_case.capitalization = pascal_case
+dotnet_naming_style.type_parameter_pascal_case.required_prefix = T
+
+dotnet_naming_style.event_handler_pascal_case.capitalization = pascal_case
+dotnet_naming_style.event_handler_pascal_case.required_suffix = EventHandler
+
+dotnet_naming_style.delegate_pascal_case.capitalization = pascal_case
+dotnet_naming_style.delegate_pascal_case.required_suffix = Callback
+
+# rules {{{3
+
+dotnet_naming_rule.public_identifiers_must_be_pascal_case.symbols = public_identifiers
+dotnet_naming_rule.public_identifiers_must_be_pascal_case.style = pascal_case
+dotnet_naming_rule.public_identifiers_must_be_pascal_case.severity = suggestion
+
+dotnet_naming_rule.parameters_must_be_camel_case.symbols = parameters
+dotnet_naming_rule.parameters_must_be_camel_case.style = camel_case
+dotnet_naming_rule.parameters_must_be_camel_case.severity = suggestion
+
+dotnet_naming_rule.interfaces_must_be_i_prefixed_pascal_case.symbols = interfaces
+dotnet_naming_rule.interfaces_must_be_i_prefixed_pascal_case.style = interface_pascal_case
+dotnet_naming_rule.interfaces_must_be_i_prefixed_pascal_case.severity = suggestion
+
+dotnet_naming_rule.type_parameters_must_be_t_prefixed_pascal_case.symbols = type_parameters
+dotnet_naming_rule.type_parameters_must_be_t_prefixed_pascal_case.style = type_parameter_pascal_case
+dotnet_naming_rule.type_parameters_must_be_t_prefixed_pascal_case.severity = suggestion
+
+dotnet_naming_rule.event_handlers_must_be_event_handler_suffixed_pascal_case.symbols = event_handlers
+dotnet_naming_rule.event_handlers_must_be_event_handler_suffixed_pascal_case.style = event_handler_pascal_case
+dotnet_naming_rule.event_handlers_must_be_event_handler_suffixed_pascal_case.severity = suggestion
+
+dotnet_naming_rule.delegates_must_be_callback_suffixed_pascal_case.symbols = delegates
+dotnet_naming_rule.delegates_must_be_callback_suffixed_pascal_case.style = delegate_pascal_case
+dotnet_naming_rule.delegates_must_be_callback_suffixed_pascal_case.severity = suggestion
 
 # Roslynator.Analyzers {{{1
+# see http://pihrt.net/Roslynator/Analyzers?Query=RCS1
 
 # Add braces
 dotnet_diagnostic.RCS1007.severity = suggestion
@@ -94,7 +393,7 @@ dotnet_diagnostic.RCS1014.severity = suggestion
 roslynator_array_creation_type_style = implicit_when_type_is_obvious
 
 # Use block body or expression body
-dotnet_diagnostic.RCS1016.severity = silent
+dotnet_diagnostic.RCS1016.severity = suggestion
 roslynator_body_style = expression
 roslynator_use_block_body_when_declaration_spans_over_multiple_lines = true
 roslynator_use_block_body_when_expression_spans_over_multiple_lines = true
@@ -104,17 +403,17 @@ dotnet_diagnostic.RCS1018.severity = suggestion
 roslynator_accessibility_modifiers = explicit
 
 # Order modifiers
-dotnet_diagnostic.RCS1019.severity = silent
+dotnet_diagnostic.RCS1019.severity = suggestion
 
 # Remove redundant comma in initializer
-dotnet_diagnostic.RCS1035.severity = silent
+dotnet_diagnostic.RCS1035.severity = suggestion
 
 # Include/omit parentheses when creating new object
-dotnet_diagnostic.RCS1050.severity = silent
+dotnet_diagnostic.RCS1050.severity = suggestion
 roslynator_object_creation_parentheses_style = omit
 
 # Add/remove parentheses from condition in conditional operator
-dotnet_diagnostic.RCS1051.severity = silent
+dotnet_diagnostic.RCS1051.severity = suggestion
 roslynator_conditional_operator_condition_parentheses_style = omit
 
 # Use "" or 'string.Empty'
@@ -125,10 +424,10 @@ roslynator_empty_string_style = field
 dotnet_diagnostic.RCS1081.severity = suggestion
 
 # Add braces to if-else
-dotnet_diagnostic.RCS1126.severity = silent
+dotnet_diagnostic.RCS1126.severity = suggestion
 
 # Remove redundant async/await
-dotnet_diagnostic.RCS1174.severity = silent
+dotnet_diagnostic.RCS1174.severity = suggestion
 
 # Use 'var' instead of explicit type (when the type is not obvious)
 dotnet_diagnostic.RCS1176.severity = suggestion
@@ -140,13 +439,13 @@ dotnet_diagnostic.RCS1177.severity = suggestion
 dotnet_diagnostic.RCS1181.severity = suggestion
 
 # Remove redundant auto-property initialization
-dotnet_diagnostic.RCS1188.severity = silent
+dotnet_diagnostic.RCS1188.severity = suggestion
 
 # Add or remove region name
-dotnet_diagnostic.RCS1189.severity = silent
+dotnet_diagnostic.RCS1189.severity = suggestion
 
 # Avoid unnecessary boxing of value type
-dotnet_diagnostic.RCS1198.severity = silent
+dotnet_diagnostic.RCS1198.severity = suggestion
 
 # Use anonymous function or method group
 dotnet_diagnostic.RCS1207.severity = suggestion
@@ -166,135 +465,141 @@ roslynator_null_check_style = pattern_matching
 # see http://pihrt.net/Roslynator/Analyzers?Query=RCS0
 
 # Add blank line after embedded statement
-dotnet_diagnostic.RCS0001.severity = silent
+dotnet_diagnostic.RCS0001.severity = suggestion
 
 # Add blank line after #region
-dotnet_diagnostic.RCS0002.severity = silent
+dotnet_diagnostic.RCS0002.severity = suggestion
 
 # Add blank line after using directive list
-dotnet_diagnostic.RCS0003.severity = silent
+dotnet_diagnostic.RCS0003.severity = suggestion
 
 # Add blank line before #endregion
-dotnet_diagnostic.RCS0005.severity = silent
-
-# Add blank line before using directive list
-dotnet_diagnostic.RCS0006.severity = silent
+dotnet_diagnostic.RCS0005.severity = suggestion
 
 # Add blank line between accessors
-dotnet_diagnostic.RCS0007.severity = silent
+dotnet_diagnostic.RCS0007.severity = suggestion
 
 # Add blank line between closing brace and next statement
-dotnet_diagnostic.RCS0008.severity = silent
+dotnet_diagnostic.RCS0008.severity = suggestion
 
 # Add blank line between declaration and documentation comment
-dotnet_diagnostic.RCS0009.severity = silent
+dotnet_diagnostic.RCS0009.severity = suggestion
 
 # Add blank line between declarations
-dotnet_diagnostic.RCS0010.severity = silent
+dotnet_diagnostic.RCS0010.severity = suggestion
 
 # Add/remove blank line between single-line accessors
-dotnet_diagnostic.RCS0011.severity = silent
+dotnet_diagnostic.RCS0011.severity = suggestion
 roslynator_blank_line_between_single_line_accessors = false
 
+# Add blank line between single-line declarations
+dotnet_diagnostic.RCS0012.severity = none
+
+# Add blank line between single-line declarations of different kind
+dotnet_diagnostic.RCS0013.severity = suggestion
+
 # Add blank line between switch sections
-dotnet_diagnostic.RCS0014.severity = silent
+dotnet_diagnostic.RCS0014.severity = suggestion
 roslynator_blank_line_between_closing_brace_and_switch_section = true
 
 # Add/remove blank line between using directives
-dotnet_diagnostic.RCS0015.severity = silent
+dotnet_diagnostic.RCS0015.severity = suggestion
 roslynator_blank_line_between_using_directives = never
 
 # Put attribute list on its own line
-dotnet_diagnostic.RCS0016.severity = silent
+dotnet_diagnostic.RCS0016.severity = suggestion
 
 # Format accessor's braces on a single line or multiple lines
-dotnet_diagnostic.RCS0020.severity = silent
+dotnet_diagnostic.RCS0020.severity = suggestion
 roslynator_accessor_braces_style = single_line_when_expression_is_on_single_line
 
 # Format block's braces on a single line or multiple lines
-dotnet_diagnostic.RCS0021.severity = silent
+dotnet_diagnostic.RCS0021.severity = suggestion
 roslynator_block_braces_style = single_line_when_empty
 
 # Add new line after switch label
-dotnet_diagnostic.RCS0024.severity = silent
+dotnet_diagnostic.RCS0024.severity = suggestion
 
 # Put full accessor on its own line
-dotnet_diagnostic.RCS0025.severity = silent
+dotnet_diagnostic.RCS0025.severity = suggestion
 
 # Place new line after/before binary operator
-dotnet_diagnostic.RCS0027.severity = silent
+dotnet_diagnostic.RCS0027.severity = suggestion
 roslynator_binary_operator_new_line = before
 
 # Place new line after/before '?:' operator
-dotnet_diagnostic.RCS0028.severity = silent
+dotnet_diagnostic.RCS0028.severity = suggestion
 roslynator_conditional_operator_new_line = before
 
 # Put constructor initializer on its own line
-dotnet_diagnostic.RCS0029.severity = silent
+dotnet_diagnostic.RCS0029.severity = suggestion
 
 # Add new line before embedded statement
-dotnet_diagnostic.RCS0030.severity = silent
+dotnet_diagnostic.RCS0030.severity = suggestion
 
 # Put enum member on its own line
-dotnet_diagnostic.RCS0031.severity = silent
+dotnet_diagnostic.RCS0031.severity = suggestion
 
 # Place new line after/before arrow token
-dotnet_diagnostic.RCS0032.severity = silent
+dotnet_diagnostic.RCS0032.severity = suggestion
 roslynator_arrow_token_new_line = after
 
 # Add new line before statement
-dotnet_diagnostic.RCS0033.severity = silent
+dotnet_diagnostic.RCS0033.severity = suggestion
 
 # Put type parameter constraint on its own line
-dotnet_diagnostic.RCS0034.severity = silent
+dotnet_diagnostic.RCS0034.severity = suggestion
+
+# Remove blank line between single-line declarations of same kind
+dotnet_diagnostic.RCS0036.severity = none
 
 # Remove new line before base list
-dotnet_diagnostic.RCS0039.severity = silent
+dotnet_diagnostic.RCS0039.severity = suggestion
 
 # Remove new line between 'if' keyword and 'else' keyword
-dotnet_diagnostic.RCS0041.severity = silent
+dotnet_diagnostic.RCS0041.severity = suggestion
 
 # Put auto-accessors on a single line
-dotnet_diagnostic.RCS0042.severity = silent
+dotnet_diagnostic.RCS0042.severity = suggestion
 
 # Format accessor's braces on a single line when expression is on single line
-dotnet_diagnostic.RCS0043.severity = silent
+dotnet_diagnostic.RCS0043.severity = suggestion
 
 # Use carriage return + linefeed as new line
-dotnet_diagnostic.RCS0044.severity = none
+dotnet_diagnostic.RCS0044.severity = suggestion
 
 # Use linefeed as new line
-dotnet_diagnostic.RCS0045.severity = silent
+dotnet_diagnostic.RCS0045.severity = none
 
 # Use spaces instead of tab
-dotnet_diagnostic.RCS0046.severity = silent
+dotnet_diagnostic.RCS0046.severity = suggestion
 
 # Put initializer on a single line
-dotnet_diagnostic.RCS0048.severity = silent
+dotnet_diagnostic.RCS0048.severity = suggestion
 
 # Add blank line after top comment
-dotnet_diagnostic.RCS0049.severity = silent
+dotnet_diagnostic.RCS0049.severity = suggestion
 
 # Add blank line before top declaration
-dotnet_diagnostic.RCS0050.severity = silent
+dotnet_diagnostic.RCS0050.severity = suggestion
 
 # Add/remove new line before 'while' in 'do' statement
-dotnet_diagnostic.RCS0051.severity = silent
+dotnet_diagnostic.RCS0051.severity = suggestion
 roslynator_new_line_before_while_in_do_statement = false
 
 # Place new line after/before equals token
-dotnet_diagnostic.RCS0052.severity = silent
+dotnet_diagnostic.RCS0052.severity = suggestion
 roslynator_equals_token_new_line = after
 
 # Fix formatting of a list
-dotnet_diagnostic.RCS0053.severity = silent
+dotnet_diagnostic.RCS0053.severity = suggestion
 
 # Fix formatting of a call chain
-dotnet_diagnostic.RCS0054.severity = silent
+dotnet_diagnostic.RCS0054.severity = suggestion
 
 # Fix formatting of a binary expression chain
-dotnet_diagnostic.RCS0055.severity = silent
+dotnet_diagnostic.RCS0055.severity = suggestion
 
 # A line is too long
-dotnet_diagnostic.RCS0056.severity = silent
+dotnet_diagnostic.RCS0056.severity = suggestion
 roslynator_max_line_length = 120
