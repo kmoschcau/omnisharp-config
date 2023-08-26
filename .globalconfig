@@ -1,4 +1,4 @@
-# vim: filetype=conf foldmethod=marker
+# vim: filetype=editorconfig foldmethod=marker
 
 # mark as global config file
 is_global = true
@@ -19,6 +19,10 @@ dotnet_analyzer_diagnostic.category-Documentation.severity = warning
 
 dotnet_analyzer_diagnostic.category-Globalization.severity = warning
 
+# Interoperability rules {{{2
+
+dotnet_analyzer_diagnostic.category-Interoperability.severity = warning
+
 # Maintainability rules {{{2
 
 dotnet_analyzer_diagnostic.category-Maintainability.severity = warning
@@ -30,6 +34,10 @@ dotnet_analyzer_diagnostic.category-Naming.severity = warning
 # Performance rules {{{2
 
 dotnet_analyzer_diagnostic.category-Performance.severity = warning
+
+# SingleFile rules {{{2
+
+dotnet_analyzer_diagnostic.category-SingleFile.severity = warning
 
 # Reliability rules {{{2
 
@@ -47,16 +55,31 @@ dotnet_analyzer_diagnostic.category-Usage.severity = warning
 
 dotnet_analyzer_diagnostic.category-Style.severity = silent
 
-# Language rules {{{2
+# Language and unnecessary code rules {{{2
 
-# var preferences
+# Simplify name
+dotnet_diagnostic.IDE0001.severity = suggestion
+
+# Simplify member access
+dotnet_diagnostic.IDE0002.severity = suggestion
+
+# Remove this or Me qualification
+dotnet_diagnostic.IDE0003.severity = suggestion
+
+# Remove unnecessary cast
+dotnet_diagnostic.IDE0004.severity = suggestion
+
+# Remove unnecessary using directives
+dotnet_diagnostic.IDE0005.severity = suggestion
+
 # Use var instead of explicit type
-dotnet_diagnostic.IDE0007.severity = suggestion
+dotnet_diagnostic.IDE0007.severity = none
+
 # Use explicit type instead of var
-dotnet_diagnostic.IDE0008.severity = none
-csharp_style_var_for_built_in_types = true
-csharp_style_var_when_type_is_apparent = true
-csharp_style_var_elsewhere = true
+dotnet_diagnostic.IDE0008.severity = suggestion
+
+# Add this or Me qualification
+dotnet_diagnostic.IDE0009.severity = none
 
 # Add missing cases to switch statement
 dotnet_diagnostic.IDE0010.severity = suggestion
@@ -76,11 +99,8 @@ dotnet_diagnostic.IDE0018.severity = suggestion
 # Use pattern matching to avoid as followed by a null check
 dotnet_diagnostic.IDE0019.severity = suggestion
 
-# Use pattern matching to avoid 'is' check followed by a cast
 # Use pattern matching to avoid is check followed by a cast (with variable)
 dotnet_diagnostic.IDE0020.severity = suggestion
-# Use pattern matching to avoid is check followed by a cast (without variable)
-dotnet_diagnostic.IDE0038.severity = none
 
 # Use expression body for constructors
 dotnet_diagnostic.IDE0021.severity = suggestion
@@ -88,9 +108,9 @@ dotnet_diagnostic.IDE0021.severity = suggestion
 # Use expression body for methods
 dotnet_diagnostic.IDE0022.severity = suggestion
 
-# Use expression body for operators
 # Use expression body for conversion operators
 dotnet_diagnostic.IDE0023.severity = suggestion
+
 # Use expression body for operators
 dotnet_diagnostic.IDE0024.severity = suggestion
 
@@ -106,9 +126,9 @@ dotnet_diagnostic.IDE0027.severity = suggestion
 # Use collection initializers
 dotnet_diagnostic.IDE0028.severity = suggestion
 
-# Use coalesce expression
 # Use coalesce expression (non-nullable types)
 dotnet_diagnostic.IDE0029.severity = suggestion
+
 # Use coalesce expression (nullable types)
 dotnet_diagnostic.IDE0030.severity = suggestion
 
@@ -124,11 +144,17 @@ dotnet_diagnostic.IDE0033.severity = suggestion
 # Simplify default expression
 dotnet_diagnostic.IDE0034.severity = suggestion
 
+# Remove unreachable code
+dotnet_diagnostic.IDE0035.severity = suggestion
+
 # Order modifiers
 dotnet_diagnostic.IDE0036.severity = suggestion
 
 # Use inferred member name
 dotnet_diagnostic.IDE0037.severity = suggestion
+
+# Use pattern matching to avoid is check followed by a cast (without variable)
+dotnet_diagnostic.IDE0038.severity = none
 
 # Use local function instead of lambda
 dotnet_diagnostic.IDE0039.severity = suggestion
@@ -151,33 +177,41 @@ dotnet_diagnostic.IDE0045.severity = suggestion
 # Use conditional expression for return
 dotnet_diagnostic.IDE0046.severity = suggestion
 
-# Parentheses preferences
 # Remove unnecessary parentheses
 dotnet_diagnostic.IDE0047.severity = suggestion
+
 # Add parentheses for clarity
 dotnet_diagnostic.IDE0048.severity = suggestion
-dotnet_style_parentheses_in_arithmetic_binary_operators = never_if_unnecessary
-dotnet_style_parentheses_in_relational_binary_operators = never_if_unnecessary
-dotnet_style_parentheses_in_other_binary_operators = never_if_unnecessary
 
 # Use language keywords instead of framework type names for type references
 dotnet_diagnostic.IDE0049.severity = suggestion
 
+# Remove unused private member
+dotnet_diagnostic.IDE0051.severity = suggestion
+
+# Remove unread private member
+dotnet_diagnostic.IDE0052.severity = suggestion
+
 # Use expression body for lambdas
 dotnet_diagnostic.IDE0053.severity = suggestion
-csharp_style_expression_bodied_lambdas = when_on_single_line
 
 # Use compound assignment
-# Use compound assignment
 dotnet_diagnostic.IDE0054.severity = suggestion
-# Use coalesce compound assignment
-dotnet_diagnostic.IDE0074.severity = suggestion
 
 # Use index operator
 dotnet_diagnostic.IDE0056.severity = suggestion
 
 # Use range operator
 dotnet_diagnostic.IDE0057.severity = suggestion
+
+# Remove unnecessary expression value
+dotnet_diagnostic.IDE0058.severity = silent
+
+# Remove unnecessary value assignment
+dotnet_diagnostic.IDE0059.severity = suggestion
+
+# Remove unused parameter
+dotnet_diagnostic.IDE0060.severity = suggestion
 
 # Use expression body for local functions
 dotnet_diagnostic.IDE0061.severity = suggestion
@@ -204,13 +238,25 @@ dotnet_diagnostic.IDE0070.severity = suggestion
 dotnet_diagnostic.IDE0071.severity = suggestion
 
 # Add missing cases to switch expression
-dotnet_diagnostic.IDE0072.severity = warning
+dotnet_diagnostic.IDE0072.severity = suggestion
+
+# Require file header
+dotnet_diagnostic.IDE0073.severity = suggestion
+
+# Use coalesce compound assignment
+dotnet_diagnostic.IDE0074.severity = suggestion
 
 # Simplify conditional expression
 dotnet_diagnostic.IDE0075.severity = suggestion
 
 # Use pattern matching
 dotnet_diagnostic.IDE0078.severity = suggestion
+
+# Remove unnecessary suppression
+dotnet_diagnostic.IDE0079.severity = suggestion
+
+# Remove unnecessary suppression operator
+dotnet_diagnostic.IDE0080.severity = suggestion
 
 # Convert typeof to nameof
 dotnet_diagnostic.IDE0082.severity = suggestion
@@ -221,15 +267,24 @@ dotnet_diagnostic.IDE0083.severity = suggestion
 # Simplify new expression
 dotnet_diagnostic.IDE0090.severity = suggestion
 
+# Remove unnecessary equality operator
+dotnet_diagnostic.IDE0100.severity = suggestion
+
+# Remove unnecessary discard
+dotnet_diagnostic.IDE0110.severity = suggestion
+
+# Simplify LINQ expression
+dotnet_diagnostic.IDE0120.severity = suggestion
+
 # Namespace does not match folder structure
 dotnet_diagnostic.IDE0130.severity = suggestion
 
 # Prefer null check over type check
 dotnet_diagnostic.IDE0150.severity = suggestion
 
-# Namespace declaration preferences
 # Use block-scoped namespace
 dotnet_diagnostic.IDE0160.severity = suggestion
+
 # Use file-scoped namespace
 dotnet_diagnostic.IDE0161.severity = none
 
@@ -239,58 +294,44 @@ dotnet_diagnostic.IDE0170.severity = suggestion
 # Use tuple to swap values
 dotnet_diagnostic.IDE0180.severity = suggestion
 
+# Remove unnecessary lambda expression
+dotnet_diagnostic.IDE0200.severity = suggestion
+
+# Convert to top-level statements
+dotnet_diagnostic.IDE0210.severity = suggestion
+
+# Convert to 'Program.Main' style program
+dotnet_diagnostic.IDE0211.severity = none
+
+# Add explicit cast in foreach loop
+dotnet_diagnostic.IDE0220.severity = suggestion
+
+# Use UTF-8 string literal
+dotnet_diagnostic.IDE0230.severity = suggestion
+
+# Nullable directive is redundant
+dotnet_diagnostic.IDE0240.severity = suggestion
+
+# Nullable directive is unnecessary
+dotnet_diagnostic.IDE0241.severity = suggestion
+
+# Struct can be made 'readonly'
+dotnet_diagnostic.IDE0250.severity = suggestion
+
+# Member can be made 'readonly'
+dotnet_diagnostic.IDE0251.severity = suggestion
+
+# Use pattern matching
+dotnet_diagnostic.IDE0260.severity = suggestion
+
+# Null check can be simplified (if null check)
+dotnet_diagnostic.IDE0270.severity = suggestion
+
+# Use 'nameof'
+dotnet_diagnostic.IDE0280.severity = suggestion
+
 # Use conditional delegate call
 dotnet_diagnostic.IDE1005.severity = suggestion
-
-# Unnecessary code rules {{{2
-
-# Simplify name
-dotnet_diagnostic.IDE0001.severity = suggestion
-
-# Simplify member access
-dotnet_diagnostic.IDE0002.severity = suggestion
-
-# this and Me preferences
-# Remove this or Me qualification
-dotnet_diagnostic.IDE0003.severity = suggestion
-# Add this or Me qualification
-dotnet_diagnostic.IDE0009.severity = none
-
-# Remove unnecessary cast
-dotnet_diagnostic.IDE0004.severity = suggestion
-
-# Remove unnecessary using directives
-dotnet_diagnostic.IDE0005.severity = suggestion
-
-# Remove unreachable code
-dotnet_diagnostic.IDE0035.severity = warning
-
-# Remove unused private member
-dotnet_diagnostic.IDE0051.severity = warning
-
-# Remove unread private member
-dotnet_diagnostic.IDE0052.severity = warning
-
-# Remove unnecessary expression value
-dotnet_diagnostic.IDE0058.severity = warning
-
-# Remove unnecessary value assignment
-dotnet_diagnostic.IDE0059.severity = warning
-
-# Remove unused parameter
-dotnet_diagnostic.IDE0060.severity = warning
-
-# Remove unnecessary suppression
-dotnet_diagnostic.IDE0079.severity = warning
-
-# Remove unnecessary suppression operator
-dotnet_diagnostic.IDE0080.severity = warning
-
-# Remove unnecessary equality operator
-dotnet_diagnostic.IDE0100.severity = suggestion
-
-# Remove unnecessary discard
-dotnet_diagnostic.IDE0110.severity = suggestion
 
 # Miscellaneous rules {{{2
 
