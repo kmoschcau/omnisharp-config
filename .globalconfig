@@ -53,8 +53,6 @@ dotnet_analyzer_diagnostic.category-Usage.severity = warning
 
 # Code style rules {{{1
 
-dotnet_analyzer_diagnostic.category-Style.severity = silent
-
 # Language and unnecessary code rules {{{2
 
 # Simplify name
